@@ -1,23 +1,29 @@
 #  Collatz Conjecture - Hailstone Numbers
-def collatz_conjecture(num):
-    if num == 1:
-        print("the end of the loop is 1.")
-    list = []
+import matplotlib.pyplot as plt
+
+def collatz_conjecture():
+    num = int(input("What number do you want to test out? "))
+    list = [num]
     answer = num
     count = 0
     while answer != 1:
+        count += 1
         if answer % 2 == 1:
             answer = 3 * answer + 1
-            count += 1
-            list.append(answer)
         else:
-            answer = answer / 2
-            count += 1
-            list.append(answer)
+            answer = int(answer / 2)
+        list.append(answer)
 
-    print(answer, count, list)
+    return list
 
 
-collatz_conjecture(5)
-collatz_conjecture(26)
-collatz_conjecture(9)
+plt.plot(collatz_conjecture())
+plt.show()
+
+# def create_x_axis(list):
+#     x_axis_list = []
+#     for x in range(0, len(list)):
+#         x_axis_list.append(x)
+#     return x_axis_list
+# x_axis([1,2,3,4])
+# collatz_conjecture(5)
