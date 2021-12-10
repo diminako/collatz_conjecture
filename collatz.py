@@ -14,16 +14,11 @@ def collatz_conjecture():
             answer = int(answer / 2)
         list.append(answer)
 
+    print(list)
     return list
 
+plt.ylabel('Range')
+plt.xlabel('Amout of Calculations')
 
-plt.plot(collatz_conjecture())
+plt.plot(collatz_conjecture(), 'ro')
 plt.show()
-
-# def create_x_axis(list):
-#     x_axis_list = []
-#     for x in range(0, len(list)):
-#         x_axis_list.append(x)
-#     return x_axis_list
-# x_axis([1,2,3,4])
-# collatz_conjecture(5)
