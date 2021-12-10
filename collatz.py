@@ -20,5 +20,5 @@ def collatz_conjecture():
 plt.ylabel('Range')
 plt.xlabel('Amout of Calculations')
 
-plt.plot(collatz_conjecture(), 'ro')
+plt.plot(collatz_conjecture())
 plt.show()
