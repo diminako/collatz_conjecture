@@ -17,6 +17,7 @@ def collatz_conjecture():
     print(list)
     return list
 
+plt.title('Collatz Conjecture')
 plt.ylabel('Range')
 plt.xlabel('Amout of Calculations')
 
