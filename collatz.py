@@ -15,9 +15,12 @@ def collatz_conjecture(num):
             count += 1
             list.append(answer)
 
-    print(answer, count, list)
+    plot_numbers(count, list)
+
+def plot_numbers(count, list):
+    print(f"Count: {count}")
+    print(f"List: {list}")
+    print(f"List: {len(list)}")
 
 
-collatz_conjecture(5)
-collatz_conjecture(26)
-collatz_conjecture(9)
+collatz_conjecture(137)
